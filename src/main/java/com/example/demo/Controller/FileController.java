@@ -3,6 +3,7 @@ package com.example.demo.Controller;
 
 import com.example.demo.entity.File;
 import com.example.demo.service.FileService;
+
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -10,7 +11,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-
 import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
@@ -86,7 +86,7 @@ public class FileController {
         try {
             // Check if the file exists
             Optional<File> fileOptional = fileService.getFileById(id);
-            if (!fileOptional.isPresent()) {
+            if (!fileOptional.isEmpty()) {
                 return ResponseEntity.notFound().build();
             }
 
