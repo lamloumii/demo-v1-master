@@ -2,12 +2,10 @@ package com.example.demo.service;
 
 
 import com.example.demo.entity.File;
-import com.example.demo.entity.Location;
-import com.example.demo.repo.FileRepo;
+import com.example.demo.Repository.FileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.FileNotFoundException;
@@ -24,11 +22,11 @@ import java.util.UUID;
 public class FileService {
 
     @Autowired
-    private FileRepo fileRepo ;
+    private FileRepository fileRepo ;
     private Path fileStorageLocation; // Path where the files will be stored
 
     @Autowired
-    public void FileStorageService(FileRepo fileRepository) {
+    public void FileStorageService(FileRepository fileRepository) {
         this.fileRepo = fileRepository;
         this.fileStorageLocation = Paths.get("uploads").toAbsolutePath().normalize();
 

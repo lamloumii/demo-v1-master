@@ -1,17 +1,10 @@
-package com.example.demo.controller;
+package com.example.demo.Controller;
 
 
 import com.example.demo.entity.File;
-import com.example.demo.entity.Location;
-import com.example.demo.repo.FileRepo;
 import com.example.demo.service.FileService;
-import jakarta.annotation.Resource;
-import jakarta.servlet.http.HttpServletRequest;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.UrlResource;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -19,8 +12,6 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.nio.file.Path;
 import java.util.List;
 import java.util.Optional;
 

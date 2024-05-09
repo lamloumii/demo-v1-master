@@ -1,9 +1,8 @@
-package com.example.demo.controller;
+package com.example.demo.Controller;
 
 import com.example.demo.service.LocalisationService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import com.example.demo.entity.Location;

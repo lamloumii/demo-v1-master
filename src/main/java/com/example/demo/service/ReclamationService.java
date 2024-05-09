@@ -1,9 +1,8 @@
 package com.example.demo.service;
 
 
-import com.example.demo.entity.Location;
 import com.example.demo.entity.Reclamation;
-import com.example.demo.repo.ReclamationRepo;
+import com.example.demo.Repository.ReclamationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,10 +11,10 @@ import java.util.Optional;
 
 @Service
 public class ReclamationService {
-    private final ReclamationRepo reclamationRepository;
+    private final ReclamationRepository reclamationRepository;
 
     @Autowired
-    public ReclamationService(ReclamationRepo reclamationRepository) {
+    public ReclamationService(ReclamationRepository reclamationRepository) {
         this.reclamationRepository = reclamationRepository;
     }
 

@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-import com.example.demo.repo.LocalisationRepo;
+import com.example.demo.Repository.LocalisationRepository;
 import lombok.AllArgsConstructor;
 
 import com.example.demo.entity.Location;
@@ -14,7 +14,7 @@ import java.util.Optional;
 public class LocalisationService {
 
 
-    private LocalisationRepo locationRepository;
+    private LocalisationRepository locationRepository;
 
     public List<Location> getAllLocations() {
         return locationRepository.findAll();

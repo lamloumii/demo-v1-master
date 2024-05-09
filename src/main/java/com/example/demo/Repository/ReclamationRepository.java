@@ -1,4 +1,4 @@
-package com.example.demo.repo;
+package com.example.demo.Repository;
 
 import com.example.demo.entity.Reclamation;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface ReclamationRepo extends JpaRepository<Reclamation,Long > {
+public interface ReclamationRepository extends JpaRepository<Reclamation,Long > {
 }
