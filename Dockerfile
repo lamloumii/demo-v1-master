@@ -31,9 +31,7 @@ WORKDIR /app
 COPY --from=build /app/target/demo-0.0.1-SNAPSHOT.jar ./myapp.jar
 
 # Step 4: Define environment variables for SQL Server connection
-ENV SPRING_DATASOURCE_URL="jdbc:sqlserver://DESKTOP-ECJR0OG\\SQLEXPRESS01;databaseName=students;portNumber=1434"
-ENV SPRING_DATASOURCE_USERNAME=sa
-ENV SPRING_DATASOURCE_PASSWORD=Azerty
+
 # Step 9: Expose the port the application uses
 EXPOSE 8080
 
